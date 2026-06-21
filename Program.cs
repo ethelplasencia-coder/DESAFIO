@@ -22,7 +22,7 @@ namespace Grupo_Flor_Yaneth_Importaciones_SRL
 
                 // Título del sistema
                 Console.WriteLine("======================================");
-                Console.WriteLine("   TIENDA BELLA DAMA - CAJAMARCA");
+                Console.WriteLine("  Grupo_Flor_Yaneth_Importaciones_SRL - CAJAMARCA");
                 Console.WriteLine("======================================");
 
                 // Opciones del menú
