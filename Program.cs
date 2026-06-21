@@ -32,7 +32,8 @@ namespace Grupo_Flor_Yaneth_Importaciones_SRL
                 Console.WriteLine("4. Registrar salida de stock");
                 Console.WriteLine("5. Registrar venta");
                 Console.WriteLine("6. Ver reporte de ventas");
-                Console.WriteLine("7. Salir");
+                Console.WriteLine("7. Eliminar producto");
+                Console.WriteLine("8. Salir");
 
                 Console.Write("Seleccione una opción: ");
 
@@ -70,8 +71,11 @@ namespace Grupo_Flor_Yaneth_Importaciones_SRL
                     case 6:
                         gestor.ReporteVentas(); // Muestra reporte
                         break;
-
                     case 7:
+                        gestor.EliminarProducto();
+                        break;
+
+                    case 8:
                         Console.WriteLine("Gracias por usar el sistema.");
                         break;
 
@@ -83,7 +87,7 @@ namespace Grupo_Flor_Yaneth_Importaciones_SRL
                 Console.WriteLine("\nPresione ENTER para continuar...");
                 Console.ReadLine();
 
-            } while (opcion != 7); // Repite hasta elegir salir
+            } while (opcion != 8); // Repite hasta elegir salir
         }
     }
     

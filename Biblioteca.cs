@@ -133,6 +133,55 @@ namespace TiendaProductosDama.Biblioteca
                 Console.WriteLine($"Código: {p.Codigo} | Nombre: {p.Nombre} | Categoría: {p.Categoria} | Precio: S/ {p.Precio:N2} | Stock: {p.Stock}");
             }
         }
+        // Función para eliminar producto
+        public void EliminarProducto()
+        {
+            Console.WriteLine("\n--- ELIMINAR PRODUCTO ---");
+
+            if (productos.Count == 0)
+            {
+                Console.WriteLine("No hay productos registrados.");
+                return;
+            }
+
+            int codigo;
+            while (true)
+            {
+                Console.Write("Ingrese el código del producto a eliminar: ");
+
+                if (int.TryParse(Console.ReadLine(), out codigo) && codigo > 0)
+                {
+                    Producto p = productos.FirstOrDefault(x => x.Codigo == codigo);
+
+                    if (p == null)
+                    {
+                        Console.WriteLine("Producto no encontrado.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Producto encontrado: {p.Nombre}");
+                        Console.Write("¿Está seguro de eliminarlo? (S/N): ");
+                        string respuesta = Console.ReadLine().ToUpper();
+
+                        if (respuesta == "S")
+                        {
+                            productos.Remove(p);
+                            Console.WriteLine("Producto eliminado correctamente.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Operación cancelada.");
+                        }
+
+                        break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Código inválido. Ingrese un número entero positivo.");
+                }
+            }
+        }
 
         // Función para agregar stock
         public void EntradaStock()
@@ -325,5 +374,7 @@ namespace TiendaProductosDama.Biblioteca
             // Muestra total vendido
             Console.WriteLine($"Total vendido: S/ {totalGeneral:N2}");
         }
+
+
     }
 }
