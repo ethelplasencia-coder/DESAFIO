@@ -1,0 +1,6 @@
+C:\Users\ethel\Downloads\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\ethel\Downloads\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\ethel\Downloads\Biblioteca\obj\Debug\Biblioteca.csproj.AssemblyReference.cache
+C:\Users\ethel\Downloads\Biblioteca\obj\Debug\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\ethel\Downloads\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\ethel\Downloads\Biblioteca\obj\Debug\Biblioteca.pdb

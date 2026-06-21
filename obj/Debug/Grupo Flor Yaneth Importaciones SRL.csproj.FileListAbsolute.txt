@@ -1,0 +1,10 @@
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\bin\Debug\Grupo Flor Yaneth Importaciones SRL.exe.config
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\bin\Debug\Grupo Flor Yaneth Importaciones SRL.exe
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\bin\Debug\Grupo Flor Yaneth Importaciones SRL.pdb
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\bin\Debug\Biblioteca.dll
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\bin\Debug\Biblioteca.pdb
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\obj\Debug\Grupo Flor Yaneth Importaciones SRL.csproj.AssemblyReference.cache
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\obj\Debug\Grupo Flor Yaneth Importaciones SRL.csproj.CoreCompileInputs.cache
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\obj\Debug\Grupo Fl.04D2E7E9.Up2Date
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\obj\Debug\Grupo Flor Yaneth Importaciones SRL.exe
+C:\Users\ethel\Downloads\Grupo Flor Yaneth Importaciones SRL\obj\Debug\Grupo Flor Yaneth Importaciones SRL.pdb
