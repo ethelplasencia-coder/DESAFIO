@@ -92,7 +92,7 @@ namespace TiendaProductosDama.Biblioteca
                 Nombre = LeerTextoSoloLetras("Nombre del producto: ", "El nombre no puede estar vacío y solo puede contener letras."),
                 Categoria = LeerTextoSoloLetras("Categoría: ", "La categoría no puede estar vacía y solo puede contener letras."),
                 Precio = LeerDecimalPositivo("Precio: S/ "),
-                Stock = LeerEnteroNoNegativo("Stock inicial: ")
+                Stock = LeerEnteroPositivo("Stock inicial: ")
             };
 
             productos.Add(p);
@@ -772,19 +772,6 @@ namespace TiendaProductosDama.Biblioteca
                     return valor;
             }
 
-        }
-
-        private int LeerEnteroNoNegativo(string mensaje)
-        {
-            int valor;
-            while (true)
-            {
-                Console.Write(mensaje);
-                if (int.TryParse(Console.ReadLine(), out valor) && valor >= 0)
-                    return valor;
-
-                Console.WriteLine("Valor inválido. Ingrese un número entero no negativo.");
-            }
         }
 
         private int LeerEnteroPositivo(string mensaje)
