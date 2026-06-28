@@ -55,6 +55,9 @@ namespace TiendaProductosDama.Biblioteca
         public string Motivo { get; set; } = "";   // "Entrada manual", "Dañado", "Vencido", "Devolución", "Venta", etc.
         public DateTime Fecha { get; set; }
     }
+    public class VolverAlMenuException : Exception
+    {
+    }
 
     // =============================================================
     //  GESTOR PRINCIPAL (BIBLIOTECA)
@@ -716,10 +719,11 @@ namespace TiendaProductosDama.Biblioteca
         {
             while (true)
             {
-                Console.Write(mensaje);
-                string texto = Console.ReadLine();
+                Console.Write($"{mensaje}(M para menú): ");
+                string texto = Console.ReadLine()?.Trim();
 
-                if (texto != null) texto = texto.Trim();
+                if (texto?.ToUpper() == "M")
+                    throw new VolverAlMenuException();
 
                 if (string.IsNullOrWhiteSpace(texto))
                 {
@@ -764,12 +768,16 @@ namespace TiendaProductosDama.Biblioteca
             decimal valor;
             while (true)
             {
-                Console.Write(mensaje);
-                string entrada = Console.ReadLine();
+                Console.Write($"{mensaje}(M para menú): ");
+                string entrada = Console.ReadLine()?.Trim();
+
+                if (entrada?.ToUpper() == "M")
+                    throw new VolverAlMenuException();
 
                 if (decimal.TryParse(entrada, NumberStyles.Number,
                     CultureInfo.InvariantCulture, out valor) && valor > 0)
                     return valor;
+                
             }
 
         }
@@ -779,7 +787,12 @@ namespace TiendaProductosDama.Biblioteca
             int valor;
             while (true)
             {
-                Console.Write(mensaje);
+                Console.Write($"{mensaje}(M para menú): ");
+                string entrada = Console.ReadLine()?.Trim();
+
+                if (entrada?.ToUpper() == "M")
+                    throw new VolverAlMenuException();
+
                 if (int.TryParse(Console.ReadLine(), out valor) && valor > 0)
                     return valor;
 

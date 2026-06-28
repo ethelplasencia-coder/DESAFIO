@@ -39,23 +39,30 @@ namespace Grupo_Flor_Yaneth_Importaciones_SRL
                     Console.WriteLine("Opción inválida. Ingrese un número entre 1 y 10.");
                     Console.Write("Seleccione una opción: ");
                 }
+                try{
+                    // Despacha la opción elegida al gestor
+                    switch (opcion)
+                    {
+                        case 1: gestor.RegistrarProducto(); break;
+                        case 2: gestor.ListarProductos(); break;
+                        case 3: gestor.EntradaStock(); break;
+                        case 4: gestor.SalidaStock(); break;
+                        case 5: gestor.RegistrarVenta(); break;
+                        case 6: gestor.ReporteVentas(); break;
+                        case 7: gestor.ModificarProducto(); break;
+                        case 8: gestor.EliminarProducto(); break;
+                        case 9: gestor.HistorialMovimientos(); break;
+                        case 10:
+                            Console.WriteLine("\nGracias por usar el sistema. ¡Hasta pronto!");
+                            break;
+                    }
 
-                // Despacha la opción elegida al gestor
-                switch (opcion)
-                {
-                    case 1: gestor.RegistrarProducto(); break;
-                    case 2: gestor.ListarProductos(); break;
-                    case 3: gestor.EntradaStock(); break;
-                    case 4: gestor.SalidaStock(); break;
-                    case 5: gestor.RegistrarVenta(); break;
-                    case 6: gestor.ReporteVentas(); break;
-                    case 7: gestor.ModificarProducto(); break;
-                    case 8: gestor.EliminarProducto(); break;
-                    case 9: gestor.HistorialMovimientos(); break;
-                    case 10:
-                        Console.WriteLine("\nGracias por usar el sistema. ¡Hasta pronto!");
-                        break;
                 }
+                catch (VolverAlMenuException)
+                {
+                    Console.WriteLine("\nRegresando al menú principal...");
+                }
+
 
                 if (opcion != 10)
                 {
