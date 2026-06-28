@@ -701,7 +701,9 @@ namespace TiendaProductosDama.Biblioteca
                 bool esLetraValida = char.IsLetter(c) || c == ' ';
                 if (!esLetraValida) return false;
             }
-
+            // No permitir un mismo carácter repetido (AAAAA, ÑÑÑÑÑ, etc.)
+            if (texto.Replace(" ", "").Distinct().Count() == 1)
+                return false;
             return true;
         }
 
