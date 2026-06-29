@@ -793,7 +793,7 @@ namespace TiendaProductosDama.Biblioteca
                 if (entrada?.ToUpper() == "M")
                     throw new VolverAlMenuException();
 
-                if (int.TryParse(Console.ReadLine(), out valor) && valor > 0)
+                if (int.TryParse(entrada, out valor) && valor > 0)
                     return valor;
 
                 Console.WriteLine("Valor inválido. Ingrese un número entero mayor que cero.");
