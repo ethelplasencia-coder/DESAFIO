@@ -777,7 +777,7 @@ namespace TiendaProductosDama.Biblioteca
                 if (decimal.TryParse(entrada, NumberStyles.Number,
                     CultureInfo.InvariantCulture, out valor) && valor > 0)
                     return valor;
-                
+                Console.WriteLine("Valor inválido. Ingrese un precio mayor que cero.");
             }
 
         }
